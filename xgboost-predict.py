@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error as MSE
 
 #head=0表示从从index为0的行开始读，使用.abs()取正数
-df = pd.read_csv(r"result.csv", header=0)
+df = pd.read_csv("doc/result.csv", header=0)
 
 col3 = df.columns[0]
 
@@ -44,8 +44,8 @@ model.fit(Xtrain, Ytrain)
 Ypred = model.predict(Xtest)
 
 # RMSE Computation
-rmse = np.sqrt(MSE(Ytest, Ypred))
-print("RMSE : % f" % (rmse))
+# rmse = np.sqrt(MSE(Ytest, Ypred))
+# print("RMSE : % f" % (rmse))
 
 
 for i in range(Ypred.size):
@@ -59,6 +59,7 @@ MSE = metrics.mean_squared_error(Ytest, Ypred)
 
 #RMSE(Root Mean Squard Error)均方根误差
 RMSE = np.sqrt(metrics.mean_squared_error(Ytest, Ypred))
+
 
 print('MSE:', MSE)
 print('RMSE:', RMSE)
