@@ -2,6 +2,15 @@
 
 https://github.com/qubvel/segmentation_models.pytorch
 
+## 安装依赖包
+
+```shell
+# pip安装requirement.txt
+pip install -r requirements.txt
+
+# 使用镜像安装
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ## labelme源码修改
 
